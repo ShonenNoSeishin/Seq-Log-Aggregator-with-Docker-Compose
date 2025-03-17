@@ -13,8 +13,8 @@ This repository provides a simple setup for using [Seq](https://datalust.co/seq)
 ## Setup
 ### 1. Clone the Repository
 ```sh
-git clone <repo_url>
-cd <repo_directory>
+git clone https://github.com/ShonenNoSeishin/Seq-Log-Aggregator-with-Docker-Compose.git
+cd Seq-Log-Aggregator-with-Docker-Compose 
 ```
 
 ### 2. Generate the Password Hash
