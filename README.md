@@ -1,6 +1,6 @@
 <a href="https://www.buymeacoffee.com/thibaut_watrisse" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
 
-# Seq as a Log Aggregator with Docker Compose (for Proxmox)
+# Seq as a Log Aggregator with Docker Compose (Example by logging Proxmox)
 
 ## Overview
 This repository provides a simple setup for using [Seq](https://datalust.co/seq) as a log aggregator with `docker compose`. The configuration includes a syslog input for ingesting logs from various sources, specifically for **Proxmox** environments.
