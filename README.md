@@ -20,7 +20,7 @@ cd Seq-Log-Aggregator-with-Docker-Compose
 ### 2. Generate the Password Hash
 To store a secure password for Seq, generate a hash and store it in a `.env` file:
 ```sh
-echo 'password' | docker run --rm -i datalust/seq config hash > .env
+echo "SEQ_ADMIN_PASSWORD_HASH=$(echo 'password' | docker run --rm -i datalust/seq config hash)" > .env
 ```
 Replace `'password'` with your desired password.
 
