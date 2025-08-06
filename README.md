@@ -67,17 +67,28 @@ services:
     ports:
       - "514:514/udp"
     environment:
-      SEQ_ADDRESS: "http://seq:5341"
+      - SEQ_ADDRESS=http://seq:5341
+      - BASE_URI=http://<YOUR_IP>:5341
+      - SEQ_API_CANONICALURI=http://<YOUR_IP>:5341
+      - TZ="Europe/Paris"
     restart: unless-stopped
+    volumes:
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
   seq:
     image: datalust/seq:latest
     ports:
       - "5341:80"
     environment:
-      ACCEPT_EULA: Y
+      - ACCEPT_EULA=Y
+      - BASE_URI=http://<YOUR_IP>:5341
+      - SEQ_API_CANONICALURI=http://<YOUR_IP>:5341
+      - TZ="Europe/Paris"
     restart: unless-stopped
     volumes:
       - ./seq-data:/data
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
 ```
 
 ## Adding Email Notifications
