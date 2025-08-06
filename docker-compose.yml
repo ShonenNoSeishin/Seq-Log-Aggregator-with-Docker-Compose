@@ -23,6 +23,7 @@ services:
       - BASE_URI=http://127.0.0.1:5341
       - SEQ_API_CANONICALURI=http://127.0.0.1:5341
       - TZ="Europe/Paris"
+      - SEQ_FIRSTRUN_ADMINPASSWORD=changeme
     restart: unless-stopped
     volumes:
       - ./seq-data:/data
