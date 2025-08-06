@@ -36,6 +36,8 @@ Once running, Seq will be accessible at:
 http://localhost:5341
 ```
 
+note : default password is "changeme" (configured in docker-compose file)
+
 ## Sending Logs from a Proxmox Node to Seq
 To forward logs from a **Proxmox (PVE) node** to Seq, follow these steps:
 
@@ -84,6 +86,7 @@ services:
       - BASE_URI=http://<YOUR_IP>:5341
       - SEQ_API_CANONICALURI=http://<YOUR_IP>:5341
       - TZ="Europe/Paris"
+      - SEQ_FIRSTRUN_ADMINPASSWORD=changeme
     restart: unless-stopped
     volumes:
       - ./seq-data:/data
