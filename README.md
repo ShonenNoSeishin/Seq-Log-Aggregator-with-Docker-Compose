@@ -47,7 +47,7 @@ apt install rsyslog -y
 ```
 2. Add the following line to `/etc/rsyslog.conf` in the machine you want to get logs, replacing `<IP>` with the IP address of your Seq server:
 ```sh
-echo "*.* @<IP>" >> /etc/rsyslog.conf
+echo "*.* @<IP>:514" >> /etc/rsyslog.conf
 ```
 3. Restart the syslog service:
 ```sh
